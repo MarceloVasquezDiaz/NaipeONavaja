@@ -19,21 +19,21 @@ else:
 
 #Cambio de numeros a letras
 if numero == 1:
-    numero == 'A'
+    numero = 'A'
 elif numero == 11:
-    numero == 'J'
+    numero = 'J'
 elif numero == 12:
-    numero == 'Q'
+    numero = 'Q'
 elif numero == 13:
-    numero == 'K'
+    numero = 'K'
 else:
-    numero == str(numero)
+    numero = str(numero)
 
 print('Bienvenido a naipe o navaja')
 print('Sacare una carta al azar debes adivinar el numero y su palo')
 
+#Adivina el numero
 while supongoquesi != True:
-    print('protip ' + str(numero))
     numerojugador = input('Adivina el numero primero')
     if numero == numerojugador:
         print('Haz acertado el numero, ahora el atributo')
@@ -45,7 +45,8 @@ while supongoquesi != True:
         if vida == 0:
             print('Te moriste')
             break
-    
+
+#Adivina el palo, si es que quedan vidas
 if vida >= 1:
     while supongoquesi2 != True:
         atributoJugador = input('Ahora el atributo (diamante, pica, corazon, trebol)')
